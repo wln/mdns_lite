@@ -24,12 +24,10 @@ defmodule MdnsLite.Mix.Tasks.InstallTest do
       + |  ]
       + |
     """)
-    |> assert_has_warning(fn warning ->
-      """
-      The defaults for `mix mdns_lite.install` are intended for Nerves projects.  Please visit
-      its README at https://hexdocs.pm/mdns_lite/readme.html for an overview of usage.
-      """ == warning
-    end)
+    |> assert_has_warning("""
+    The defaults for `mix mdns_lite.install` are intended for Nerves projects.  Please visit
+    its README at https://hexdocs.pm/mdns_lite/readme.html for an overview of usage.
+    """)
   end
 
   test "installer adds default mdns_lite values for target.exs" do
